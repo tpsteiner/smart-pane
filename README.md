@@ -5,7 +5,7 @@ Extend h and l to adjust preview size.
 https://github.com/user-attachments/assets/ae259f4e-73ec-48f4-9b5e-217c56f80d0d
 
 ## Installation and Usage
-Copy main.lua to `~/.config/yazi/plugins/smart-pane/main.lua`
+Copy main.lua to `~/.config/yazi/plugins/smart-pane.yazi/main.lua`
 
 Edit your `~/.config/yazi/keymap.toml` to change the mapping of your main left/right keys (default h and l).
 
