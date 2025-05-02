@@ -2,6 +2,8 @@
 
 Extend h and l to adjust preview size.
 
+[demo](https://github.com/tpsteiner/smart-pane/edit/main/demo.mp4)
+
 ## Installation and Usage
 Copy main.lua to `~/.config/yazi/plugins/smart-pane/main.lua`
 
