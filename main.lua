@@ -2,6 +2,14 @@
 --- @sync entry
 --- Thanks to https://github.com/yazi-rs/plugins/blob/main/toggle-pane.yazi/main.lua for MIT license
 
+local function mgr_emit(name, args)
+	if ya.emit then
+		ya.emit(name, args)
+	else
+		ya.mgr_emit(name, args)
+	end
+end
+
 local function entry(self, job)
 	if #job.args ~= 1 or (job.args[1] ~= "enter" and job.args[1] ~= "leave") then
 		return
@@ -24,11 +32,11 @@ local function entry(self, job)
 		elseif parent_is_hidden then
 			self.parent = default.parent
 		else
-			ya.mgr_emit("leave", {})
+			mgr_emit("leave", {})
 		end
 	else
 		if is_dir then
-			ya.mgr_emit("enter", {})
+			mgr_emit("enter", {})
 		elseif not parent_is_hidden then
 			self.parent = 0
 		elseif not current_is_hidden then
